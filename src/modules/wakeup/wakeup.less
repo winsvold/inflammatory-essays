@@ -1,0 +1,40 @@
+.wake-up-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  .backDrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+  }
+  .wake-up-console {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 0;
+    padding: 2em;
+    font-size: 3em;
+    font-weight: bolder;
+    line-height: 1em;
+      font-family: 'Amatic SC', cursive;
+    //  font-family: 'Bungee', cursive;
+    // font-family: 'Special Elite', cursive;
+    text-transform: uppercase;
+    .vertical-bar{
+      display: inline-flex;
+      background-color: @fontColor;
+      height: 0.9em;
+      width: 0.5em;
+      position: relative;
+      top: 0.1em;
+      left: 0.1em;
+      .blink_me;
+    }
+  }
+}

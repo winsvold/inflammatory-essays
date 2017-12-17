@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Bungee|Special+Elite');
+.side-menu-container .btn-open-side-menu {
+  position: fixed;
+  padding: 1em;
+  top: 0;
+  right: 0;
+  opacity: 0.15;
+  transition: 0.3s;
+}
+.side-menu-container .btn-open-side-menu svg {
+  stroke: #fff4c2;
+  stroke-width: 5;
+}
+.side-menu-container .btn-open-side-menu:hover {
+  opacity: 0.30;
+}
+.side-menu-container .side-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #1a1a1a;
+  opacity: 0.7;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  box-sizing: border-box;
+}
+.side-menu-container .side-menu a {
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #fff4c2;
+  display: block;
+  transition: 0.3s;
+}
+.side-menu-container .side-menu a:hover {
+  color: #fff;
+}
+.side-menu-container .side-menu .content {
+  position: relative;
+  left: 1em;
+  overflow: hidden;
+}
+.side-menu-container .side-menu .btn-close {
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  font-size: 4em;
+}
+.wake-up-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.wake-up-container .backDrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+.wake-up-container .wake-up-console {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 0;
+  padding: 2em;
+  font-size: 3em;
+  font-weight: bolder;
+  line-height: 1em;
+  font-family: 'Amatic SC', cursive;
+  text-transform: uppercase;
+}
+.wake-up-container .wake-up-console .vertical-bar {
+  display: inline-flex;
+  background-color: #fff4c2;
+  height: 0.9em;
+  width: 0.5em;
+  position: relative;
+  top: 0.1em;
+  left: 0.1em;
+  animation: blinker 1s linear infinite;
+}
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+.appContainer {
+  background-color: midnightblue;
+  color: #fff4c2;
+}

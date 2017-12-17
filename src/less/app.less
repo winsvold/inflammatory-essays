@@ -1,0 +1,18 @@
+@import '../modules/sidemenu/sidemenu.less';
+@import '../modules/wakeup/wakeup.less';
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Bungee|Special+Elite');
+
+@fontColor: #fff4c2;
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+.appContainer{
+  background-color: midnightblue;
+  color: @fontColor;
+}

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PT from 'prop-types';
+import SelfWritingConsoleView from "./SelfWritingConsoleView";
 
-class WakeUp extends Component {
+class SelfWritingConsole extends Component {
 
     constructor(props){
         super(props);
@@ -9,14 +10,33 @@ class WakeUp extends Component {
             lineNumber: 0,
             linePosition: 0,
             outPut: '',
-            IBeamBlink: true
+            active: true
         };
     }
     
     componentDidMount(){
-        const delay = this.props.textComponents[0].delay;
+        this.startWriting(this.props);
+    }
+
+    startWriting(props){
+        const delay = props.textComponents[0].delay;
         setTimeout(() => this.updateText(), delay);
-        setInterval(() => this.blinkIBeamHack(), 200);
+    }
+
+    componentWillReceiveProps(nextProps){
+        if(this.state.active)
+            return;
+        if(nextProps.textComponents[0].text !== this.props.textComponents[0].text){
+            this.setState({
+                lineNumber: 0,
+                linePosition: 0,
+                outPut: '',
+                active: true
+            });
+            this.startWriting(nextProps);
+        } else {
+            this.props.callBack();
+        }
     }
     
     updateText(){
@@ -30,6 +50,9 @@ class WakeUp extends Component {
 
         const endOfText = textComponents.length - 1 === lineNumber && this.isAtEndOfLine(currentComponent);
         if(endOfText) {
+            this.setState({
+                active: false
+            });
             this.props.callBack();
         } else {
             this.setTimeoutForNextIteration(textComponents, lineNumber, linePos);
@@ -102,45 +125,26 @@ class WakeUp extends Component {
         return currentComponent.text.length === this.state.linePosition;
     }
 
-    blinkIBeamHack() { //Hack to make the span work with newLines. For some reason the IBeamBlink will prevent text from rendering on the new line, but removing it shortly solves the problem.
-        this.setState({
-            IBeamBlink: !this.state.IBeamBlink,
-        });
-        this.setState({
-            IBeamBlink: !this.state.IBeamBlink,
-        });
-    }
-
-    blinker() {
-        return <span className='vertical-bar'>{this.state.IBeamBlink ? '.' : ''}</span>; //Hack to make the span work with newLines. Content in the span needs to change to trigger correct rendering.
-    }
-
     render(){
-        return(
-            <div className='wake-up-container'>
-                <div className='backDrop' />
-                <div className='wake-up-console'>
-                    {this.state.outPut}
-                    {this.blinker()}
-                </div>
-            </div>
-        );
+        return <SelfWritingConsoleView color={this.props.color} text={this.state.outPut} />;
     }
 }
 
-WakeUp.propTypes = {
+SelfWritingConsole.propTypes = {
     textComponents: PT.arrayOf( PT.shape({
         delay: PT.number,
         clear: PT.bool,
         text: PT.string,
         interval: PT.number
     })).isRequired,
+    color: PT.string,
     callBack: PT.func
 };
 
-WakeUp.defaultProps = {
+SelfWritingConsole.defaultProps = {
+    color: '#bbb',
     callBack: () => {}
 };
 
 
-export default WakeUp;
+export default SelfWritingConsole;

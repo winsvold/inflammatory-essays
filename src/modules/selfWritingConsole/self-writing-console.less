@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Bungee|Special+Elite');
+
+//Layout
+.wake-up-container{
+  .backDrop{
+    position:absolute;
+    bottom:0;
+    top:0;
+    left:0;
+    right:0;
+    width: 550px;
+    margin: 4rem auto;
+  }
+}
+
+//Styling
+.wake-up-container{
+  .backDrop{
+    overflow-y: hidden;
+    padding: 4em;
+    transition: 2s;
+
+    .wake-up-console {
+      font-size: 5em;
+      line-height: 1em;
+      text-transform: uppercase;
+      font-family: 'Amatic SC', cursive;
+
+      .vertical-bar{
+        display: inline-flex;
+        background-color: @fontColor;
+        height: 0.9em;
+        width: 0.5em;
+        position: relative;
+        top: 0.1em;
+        left: 0.1em;
+        .blink_me;
+      }
+    }
+  }
+}

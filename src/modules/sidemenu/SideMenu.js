@@ -26,10 +26,10 @@ function SideMenu({content, open, callback, width}){
                 </a>
             </span>
             <div id="side-menu" className="side-menu" style={showContent()}>
-                <a href="#" className="btn-close" onClick={()=>callback(false)}>&times;</a>
-                <div className="content" style={{width: (width - 30) + 'px'}}>
+                <div className="content" style={{width: (width - 40) + 'px'}}>
                     {content}
                 </div>
+                <a href="#" className="btn-close" onClick={()=>callback(false)}>&times;</a>
             </div>
         </div>
     );

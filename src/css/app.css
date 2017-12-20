@@ -24,12 +24,12 @@
   background-color: #1a1a1a;
   opacity: 0.95;
   overflow-x: hidden;
-  padding-top: 60px;
+  padding-top: 40px;
   transition: 0.5s;
   box-sizing: border-box;
 }
 .side-menu-container .side-menu a {
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
   text-decoration: none;
   font-size: 22px;
   color: #fff4c2;
@@ -41,14 +41,15 @@
 }
 .side-menu-container .side-menu .content {
   position: relative;
-  left: 1em;
+  padding: 20px 10px 20px 30px;
+  font-size: 1.3em;
   overflow: hidden;
 }
 .side-menu-container .side-menu .btn-close {
   position: absolute;
-  top: 5px;
-  left: 0px;
-  font-size: 4em;
+  top: -15px;
+  left: 10px;
+  font-size: 6em;
 }
 .wake-up-container .backDrop {
   position: absolute;
@@ -69,6 +70,7 @@
   line-height: 1em;
   text-transform: uppercase;
   font-family: 'Amatic SC', cursive;
+  text-shadow: 0.2px 0.2px 3px rgba(0, 0, 0, 0.6);
 }
 .wake-up-container .backDrop .wake-up-console .vertical-bar {
   display: inline-flex;

@@ -53,7 +53,11 @@ class App extends Component {
                                         () => setTimeout( () => this.chooseNewEssay(), 2000)
                                     }
                 />
-                <SideMenu content={sideMenuContent} open={this.state.sideMenuOpen} callback={()=>this.toggleSideMenu()}/>
+                <SideMenu content={sideMenuContent}
+                          open={this.state.sideMenuOpen}
+                          callback={()=>this.toggleSideMenu()}
+                          width={300}
+                />
             </div>
         );
     }

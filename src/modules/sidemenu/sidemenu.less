@@ -10,10 +10,9 @@
       stroke: @fontColor;
       height: 50px;
     }
-  }
-
-  .btn-open-side-menu:hover{
-    opacity: 0.30;
+    &:hover{
+      opacity: 0.30;
+    }
   }
 
   .side-menu {
@@ -26,34 +25,35 @@
     background-color: #1a1a1a;
     opacity: 0.95;
     overflow-x: hidden;
-    padding-top: 60px;
+    padding-top: 40px;
     transition: 0.5s;
     box-sizing: border-box;
 
     a {
-      padding: 10px 10px 10px 10px;
+      padding: 10px;
       text-decoration: none;
       font-size: 22px;
       color: @fontColor;
       display: block;
       transition: 0.3s;
-    }
-
-    a:hover {
-      color: #fff;
+      &:hover {
+        color: #fff;
+      }
     }
 
     .content {
       position: relative;
-      left: 1em;
+      padding: 20px 10px 20px 30px;
+      font-size: 1.3em;
       overflow: hidden;
     }
 
+
     .btn-close {
       position: absolute;
-      top: 5px;
-      left: 0px;
-      font-size: 4em;
+      top: -15px;
+      left: 10px;
+      font-size: 6em;
     }
   }
 }

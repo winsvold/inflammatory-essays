@@ -25,7 +25,7 @@ class SelfWritingConsoleView extends Component {
     }
 
     blinker() {
-        return <span className='vertical-bar'>{this.state.IBeamBlink ? '.' : ''}</span>; //Hack to make the span work with newLines. Content in the span needs to change to trigger correct rendering.
+        return <span className='vertical-bar'>{this.state.IBeamBlink ? '\u00a0' : ''}</span>; //Hack to make the span work with newLines. Content in the span needs to change to trigger correct rendering.
     }
 
     scrollToThis() {

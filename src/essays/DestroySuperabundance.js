@@ -1,3 +1,5 @@
+import hsl from 'hsl-to-hex';
+
 const textComponents = [{
     delay: 3000,
         clear: true,
@@ -52,7 +54,7 @@ const textComponents = [{
 
 export const essay = {
     name: "Destroy superabundance",
-    color: '#0f0',
+    color: hsl(205,35,50),
     textComponents: textComponents
 };
 

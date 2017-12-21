@@ -1,3 +1,5 @@
+import hsl from 'hsl-to-hex';
+
 const textComponents = [{
     delay: 3000,
         clear: true,
@@ -52,7 +54,7 @@ const textComponents = [{
 
 export const essay = {
     name: "Fear is the most elegant weapon",
-    color: '#00f',
+    color: hsl(20,30,60),
     textComponents: textComponents
 };
 

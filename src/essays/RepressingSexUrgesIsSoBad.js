@@ -1,3 +1,5 @@
+import hsl from 'hsl-to-hex';
+
 const textComponents = [{
     delay: 3000,
     clear: true,
@@ -42,7 +44,7 @@ const textComponents = [{
 
 export const essay = {
     name: "Repressing sex urges is so bad",
-    color: '#f00',
+    color: hsl(80,35,55),
     textComponents: textComponents
 };
 

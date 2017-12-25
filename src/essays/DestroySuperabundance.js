@@ -14,7 +14,7 @@ const textComponents = [{
     delay: 2000,
         clear: true,
         text: '',
-        interval: 120
+        interval: 140
 },{
     delay: 1000,
         clear: true,
@@ -24,7 +24,7 @@ const textComponents = [{
     delay: 2000,
         clear: true,
         text: '',
-        interval: 120
+        interval: 140
 },{
     delay: 1000,
         clear: true,
@@ -34,22 +34,22 @@ const textComponents = [{
     delay: 2000,
         clear: true,
         text: '',
-        interval: 120
+        interval: 140
 },{
     delay: 1000,
         clear: true,
         text: ' It\'s a question of form as much as function.',
-        interval: 120
+        interval: 140
 },{
     delay: 2000,
         clear: false,
         text: ' It is a matter of revulsion.',
-        interval: 120
+        interval: 140
 },{
     delay: 8000,
         clear: true,
         text: '',
-        interval: 120
+        interval: 140
 }];
 
 export const essay = {

@@ -83,6 +83,12 @@ class SelfWritingConsole extends Component {
         if(currentAndNextChar === ', '){
             delay *= 4;
         }
+        if(currentAndNextChar === '; '){
+            delay *= 4;
+        }
+        if(currentAndNextChar === ': '){
+            delay *= 4;
+        }
         return delay;
     }
 

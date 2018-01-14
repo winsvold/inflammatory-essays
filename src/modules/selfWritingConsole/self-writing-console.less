@@ -1,16 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 
+.FillScreen {
+  bottom:0;
+  top:0;
+  left:0;
+  right:0;
+}
+
 //Layout
 .wake-up-container{
+  .FillScreen;
+  position: absolute;
+  display:flex;
+  justify-content:center;
+  align-items:center;
   .backDrop{
     position:absolute;
-    bottom:0;
-    top:0;
-    left:0;
-    right:0;
     box-sizing: border-box;
-    width: 650px;
-    max-height: 650px;
+    width: 80%;
+    height: 80vh;
+    max-width: 650px;
+    max-height: 100vw;
     margin: auto;
   }
 }
@@ -19,11 +29,17 @@
 .wake-up-container{
   .backDrop{
     overflow-y: hidden;
-    padding: 45px;
+    @media (min-width: 900px) {
+      padding: 54px;
+    }
+    padding: 6vw;
     transition: 2s;
 
     .wake-up-console {
-      font-size: 85px;
+      @media (min-width: 900px) {
+        font-size: 81px;
+      }
+      font-size: 9vw;
       line-height: 1em;
       text-transform: uppercase;
       font-family: 'Amatic SC', cursive;

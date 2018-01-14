@@ -1,4 +1,5 @@
-<h1>inflammatory-essays</h1>
-<p>A homage to Jenny Holzer and her ’15 Inflammatory Essays’</p>
+Inflammatory-Essays
+===================
+A homage to Jenny Holzer and her ’15 Inflammatory Essays’
 
-https://winsvold.github.io/inflammatory-essays/
+`https://winsvold.github.io/inflammatory-essays/`

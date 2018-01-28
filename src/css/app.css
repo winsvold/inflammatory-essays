@@ -1,4 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+.make-button-appear-as-link button,
+.make-button-appear-as-link button:focus,
+.make-button-appear-as-link button:active {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+  display: inline;
+  outline: none;
+  outline-offset: 0;
+}
+.side-menu-container button,
+.side-menu-container button:focus,
+.side-menu-container button:active {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+  display: inline;
+  outline: none;
+  outline-offset: 0;
+}
 .side-menu-container .btn-open-side-menu {
   position: fixed;
   padding: 1em;
@@ -28,17 +56,6 @@
   transition: 0.5s;
   box-sizing: border-box;
 }
-.side-menu-container .side-menu a {
-  padding: 10px;
-  text-decoration: none;
-  font-size: 22px;
-  color: #fff4c2;
-  display: block;
-  transition: 0.3s;
-}
-.side-menu-container .side-menu a:hover {
-  color: #fff;
-}
 .side-menu-container .side-menu .content {
   position: relative;
   padding: 20px 10px 20px 30px;
@@ -50,6 +67,13 @@
   top: -15px;
   left: 10px;
   font-size: 6em;
+  padding: 10px;
+  color: #fff4c2;
+  display: block;
+  transition: 0.3s;
+}
+.side-menu-container .side-menu .btn-close:hover {
+  color: #fff;
 }
 .FillScreen {
   bottom: 0;

@@ -10,7 +10,8 @@ class SelfWritingConsole extends Component {
             lineNumber: 0,
             linePosition: 0,
             outPut: '',
-            active: true
+            active: true,
+            timeoutRef: undefined
         };
     }
     
@@ -20,7 +21,10 @@ class SelfWritingConsole extends Component {
 
     startWriting(props){
         const delay = props.textComponents[0].delay;
-        setTimeout(() => this.updateText(), delay);
+        const timeoutRef = setTimeout(() => this.updateText(), delay);
+        this.setState({
+            timeoutRef: timeoutRef
+        });
     }
 
     componentWillReceiveProps(nextProps){
@@ -67,7 +71,11 @@ class SelfWritingConsole extends Component {
         } else {
             delay = this.delayBeforeNextLetter(currentComponent, linePos);
         }
-        setTimeout(() => this.updateText(), delay);
+        clearTimeout(this.state.timeoutRef);
+        const timeoutRef = setTimeout(() => this.updateText(), delay);
+        this.setState({
+            timeoutRef: timeoutRef
+        });
     }
 
     delayBeforeNextLetter(currentComponent, linePos) {

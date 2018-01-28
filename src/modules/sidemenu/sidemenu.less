@@ -1,4 +1,21 @@
+.make-button-appear-as-link {
+  button, button:focus, button:active {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+    display: inline;
+    outline: none;
+    outline-offset: 0;
+  }
+}
+
 .side-menu-container {
+  .make-button-appear-as-link;
+
   .btn-open-side-menu {
     position: fixed;
     padding: 1em;
@@ -29,18 +46,6 @@
     transition: 0.5s;
     box-sizing: border-box;
 
-    a {
-      padding: 10px;
-      text-decoration: none;
-      font-size: 22px;
-      color: @fontColor;
-      display: block;
-      transition: 0.3s;
-      &:hover {
-        color: #fff;
-      }
-    }
-
     .content {
       position: relative;
       padding: 20px 10px 20px 30px;
@@ -48,12 +53,18 @@
       overflow: hidden;
     }
 
-
     .btn-close {
       position: absolute;
       top: -15px;
       left: 10px;
       font-size: 6em;
+      padding: 10px;
+      color: @fontColor;
+      display: block;
+      transition: 0.3s;
+      &:hover {
+        color: #fff;
+      }
     }
   }
 }

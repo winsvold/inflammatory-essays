@@ -58,7 +58,7 @@ const textComponents = [{
 }];
 
 export const essay = {
-    name: "Sentimentality delays the removal of the dangerously backward and the unfit",
+    name: "Sentimentality delays",
     color: hsl(18,85,55),
     textComponents: textComponents
 };

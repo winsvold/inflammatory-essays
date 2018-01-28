@@ -4,6 +4,7 @@ import SelfWritingConsole from "./modules/selfWritingConsole/SelfWritingConsole"
 import ESSAYS from './essays/Essays';
 import SideMenu from "./modules/sidemenu/SideMenu";
 import sideMenuContent from "./resources/sidemenucontent";
+import ReactGA from 'react-ga';
 
 const DONT_RESPECT_LINE_BREAKS = false;
 
@@ -14,6 +15,8 @@ function getRandomInt(min, max) {
 class App extends Component {
     constructor(props){
         super(props);
+        ReactGA.initialize('UA-111578827-1');
+        ReactGA.pageview('Inflammatory Essays');
         this.state = {
             sideMenuOpen: false,
             currentEssay: {}
@@ -33,9 +36,11 @@ class App extends Component {
 
     chooseNewEssay() {
         const numberOfEssays = ESSAYS.length;
-        const nextEssay = getRandomInt(0,numberOfEssays - 1);
+        const nextEssay = ESSAYS[getRandomInt(0,numberOfEssays - 1)];
+        console.log(nextEssay.name);
+        ReactGA.pageview(nextEssay.name);
         this.setState({
-            currentEssay: ESSAYS[nextEssay]
+            currentEssay: nextEssay
         });
     }
 

@@ -21,7 +21,6 @@ class App extends Component {
             sideMenuOpen: false,
             currentEssay: {}
         };
-        document.title = "Inflammatory Essays";
     }
 
     componentWillMount(){

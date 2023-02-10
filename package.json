@@ -7,7 +7,6 @@
     "hsl-to-hex": "1.0.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
-    "react-ga": "^2.4.1",
     "react-scripts": "1.0.17"
   },
   "scripts": {
@@ -15,14 +14,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "less": "less-watch-compiler",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "less": "less-watch-compiler"
   },
   "devDependencies": {
     "eslint": "^4.13.0",
     "eslint-plugin-react": "^7.5.1",
-    "gh-pages": "^1.1.0",
     "less": "^2.7.3",
     "less-watch-compiler": "^1.10.0"
   }
